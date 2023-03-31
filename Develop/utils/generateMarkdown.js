@@ -1,20 +1,26 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  console.log("line 4");
+  console.log(license);
   switch (license) {
     case "MIT":
+      console.log("MIT Case Started");
       renderLicenseLink(license);
       return `
       [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
     case "APACHE 2.0":
+      console.log("APACHE Case Started");
       renderLicenseLink(license);
       return `
       [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
     case "GPL 3.0":
+      console.log("GPL Case Started");
       renderLicenseLink(license);
       return `
       [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
     case "BSD 3":
+      console.log("BSD Case Started");
       renderLicenseLink(license);
       return `
       [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`;
@@ -973,7 +979,7 @@ Public License instead of this License.  But first, please read
 function generateMarkdown(data) {
   console.log("Line 974");
   return `
-  ${renderLicenseBadge}
+  ${renderLicenseBadge()}
   # ${data.name}
 
   ## Description
@@ -1009,11 +1015,10 @@ function generateMarkdown(data) {
   
   ## License
   
-  ${renderLicenseLink}
+  ${renderLicenseLink()}
   
-  ${renderLicenseSection}
+  ${renderLicenseSection()}
 
-  The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
   
   ## Features
   
@@ -1024,12 +1029,9 @@ function generateMarkdown(data) {
   ${data.guide}
   ${data.link}
   
-  If you created an application or package and would like other developers to contribute to it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-  
   ## Tests
   
   ${data.test}
-  Go the extra mile and write tests for your application. Then provide examples on how to run them here.
 `;
 }
 

@@ -2,7 +2,6 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
-const fileName = "README.md";
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -34,6 +33,7 @@ function writeToFile(fileName, data) {
   console.log("Line 34");
   generateMarkdown(data),
     (err) => (err ? console.log(err) : console.log("Success!"));
+  console.log(fileName, generateMarkdown(data));
 }
 
 // TODO: Create a function to initialize app
@@ -79,6 +79,7 @@ function init() {
       },
     ])
     .then((data) => {
+      const fileName = "README.md";
       console.log(data);
 
       writeToFile(fileName, data);
