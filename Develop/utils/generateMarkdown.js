@@ -1,37 +1,34 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  console.log("line 4");
+  console.log(`Line 4: ${license}`);
   console.log(license);
   switch (license) {
     case "MIT":
       console.log("MIT Case Started");
       renderLicenseLink(license);
-      return `
-      [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+      return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
     case "APACHE 2.0":
       console.log("APACHE Case Started");
       renderLicenseLink(license);
-      return `
-      [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+      return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
     case "GPL 3.0":
       console.log("GPL Case Started");
       renderLicenseLink(license);
-      return `
-      [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
+      return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
     case "BSD 3":
       console.log("BSD Case Started");
       renderLicenseLink(license);
-      return `
-      [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`;
+      return `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`;
     default:
-      break;
+      return "";
   }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+  console.log(`Line 31: ${license}`);
   switch (license) {
     case "MIT":
       return `https://www.mit.edu/~amini/LICENSE.md`;
@@ -44,13 +41,14 @@ function renderLicenseLink(license) {
       return `https://opensource.org/license/bsd-3-clause/`;
 
     default:
-      break;
+      return "";
   }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
+  console.log(`Line 51: ${license}`);
   switch (license) {
     case "MIT":
       return `
@@ -971,15 +969,17 @@ Public License instead of this License.  But first, please read
       THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.`;
 
     default:
-      break;
+      return "";
   }
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  console.log("Line 974");
+  console.log(`Line 980: ${data}`);
+  const license = data.license;
+  console.log(license);
   return `
-  ${renderLicenseBadge()}
+  ${`${renderLicenseBadge(license)}`}
   # ${data.name}
 
   ## Description
@@ -1015,9 +1015,9 @@ function generateMarkdown(data) {
   
   ## License
   
-  ${renderLicenseLink()}
+  ${`${renderLicenseLink(license)}`}
   
-  ${renderLicenseSection()}
+  ${`${renderLicenseSection(license)}`}
 
   
   ## Features

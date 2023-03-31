@@ -11,6 +11,8 @@ const questions = [
   "Please Give Credits:",
   "What License do I use?",
   "Any Features?",
+  "Define Rules of Contribution",
+  "Please Provide Link for Contribution",
   "Any Tests?",
 ];
 
@@ -23,6 +25,8 @@ const [
   pleaseGiveCredits,
   whatLicenseDoIUse,
   anyFeatures,
+  contRules,
+  contLink,
   anyTests,
 ] = questions;
 
@@ -34,6 +38,7 @@ function writeToFile(fileName, data) {
   generateMarkdown(data),
     (err) => (err ? console.log(err) : console.log("Success!"));
   console.log(fileName, generateMarkdown(data));
+  fs.appendFile(fileName, generateMarkdown(data));
 }
 
 // TODO: Create a function to initialize app
@@ -71,6 +76,16 @@ function init() {
         type: "input",
         message: anyFeatures,
         name: "feats",
+      },
+      {
+        type: "input",
+        message: contRules,
+        name: "guide",
+      },
+      {
+        type: "input",
+        message: contLink,
+        name: "link",
       },
       {
         type: "input",
