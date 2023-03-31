@@ -971,8 +971,9 @@ Public License instead of this License.  But first, please read
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  console.log("Line 974");
   return `
-
+  ${renderLicenseBadge}
   # ${data.name}
 
   ## Description

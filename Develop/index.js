@@ -31,9 +31,9 @@ const [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  fs.writeFile(generateMarkdown(data), (err) =>
-    err ? console.log(err) : console.log("Success!")
-  );
+  console.log("Line 34");
+  generateMarkdown(data),
+    (err) => (err ? console.log(err) : console.log("Success!"));
 }
 
 // TODO: Create a function to initialize app
