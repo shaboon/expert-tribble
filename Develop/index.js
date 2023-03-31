@@ -8,6 +8,8 @@ const questions = [
   "Project Name?",
   "Description?",
   "How do I Install?",
+  "What Kind of Application is This?",
+  "How will they Use This?",
   "Please Give Credits:",
   "What License do I use?",
   "Any Features?",
@@ -22,6 +24,8 @@ const [
   projectName,
   description,
   howDoIInstall,
+  appKind,
+  usage,
   pleaseGiveCredits,
   whatLicenseDoIUse,
   anyFeatures,
@@ -35,10 +39,10 @@ const [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   console.log("Line 34");
-  generateMarkdown(data),
-    (err) => (err ? console.log(err) : console.log("Success!"));
-  console.log(fileName, generateMarkdown(data));
-  fs.appendFile(fileName, generateMarkdown(data));
+  console.log(data);
+  fs.writeFile(fileName, data, (err) =>
+    err ? console.error(err) : console.log("Success!")
+  );
 }
 
 // TODO: Create a function to initialize app
@@ -60,6 +64,16 @@ function init() {
         message: howDoIInstall,
         name: "install",
         choices: ["Web-Application - N/A", "UnZip & Run Executable"],
+      },
+      {
+        type: "input",
+        message: appKind,
+        name: "type",
+      },
+      {
+        type: "input",
+        message: usage,
+        name: "usage",
       },
       {
         type: "list",
@@ -97,7 +111,7 @@ function init() {
       const fileName = "README.md";
       console.log(data);
 
-      writeToFile(fileName, data);
+      writeToFile(fileName, generateMarkdown(data));
     });
 }
 
