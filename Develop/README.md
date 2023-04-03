@@ -6,7 +6,14 @@
   2
 
   ## Table of Contents 
-  [Installation](#Installation)  [Usage](#Usage)  [Credits](#Credits)  [License](#License)  [Features](#Features)  [How To Contribute](#How-To-Contribute)  [Tests](#Tests)
+  [Installation](#Installation) | 
+  [Usage](#Usage) | 
+  [Credits](#Credits) | 
+  [License](#License) | 
+  [Features](#Features) | 
+  [How To Contribute](#How-To-Contribute) | 
+  [Tests](#Tests)
+
   ## Installation
   Web-Application - N/A
   
@@ -19,7 +26,7 @@
   
   ## Credits
   
-  6
+  7
 
   License Badges Taken From:
 
@@ -56,13 +63,13 @@
   
   ## Features
   
-  7
+  87
   
   ## How to Contribute
 
-  8
   9
+  0
   
   ## Tests
   
-  0
+  12
