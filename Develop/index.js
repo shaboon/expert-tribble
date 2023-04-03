@@ -9,7 +9,7 @@ const questions = [
   "Description?",
   "How do I Install?",
   "What Kind of Application is This?",
-  "How will they Use This?",
+  "How Will They Use This?",
   "Please Give Credits:",
   "What License do I use?",
   "Any Features?",
