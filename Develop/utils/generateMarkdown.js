@@ -986,13 +986,13 @@ function generateMarkdown(data) {
   ${data.desc}
 
   ## Table of Contents 
-  [Installation](#Installation) | 
-  [Usage](#Usage) | 
-  [Credits](#Credits) | 
-  [License](#License) | 
-  [Features](#Features) | 
-  [How To Contribute](#How-To-Contribute) | 
-  [Tests](#Tests)
+  [Installation](#Installation)\
+  [Usage](#Usage)\
+  [Credits](#Credits)\
+  [License](#License)\
+  [Features](#Features)\
+  [How To Contribute](#How-To-Contribute)\
+  [Tests](#Tests)\
 
   ## Installation
   ${data.install}
