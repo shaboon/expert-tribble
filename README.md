@@ -25,6 +25,9 @@ UnZip & Run Executable
 Application Type: The Application utilizes NodeJS and Inquirer 8.2.4
 Users may pull the repository with the given link and run the program within the terminal using the command "node index.js" within the Develop Folder
 
+Usage Demo:
+https://drive.google.com/file/d/1mbMgfyIwpo4siZjW6aChVzauNxlWY408/view?usp=sharing
+
 ## Credits
 
 Sean Haboon, Abed Hasan, Sarah Miller, Matthew Lombard, Chris Snyder
